@@ -3,7 +3,12 @@ import React from 'react'
 const Home = () => {
   return (
     <div>
-      <h1 className='text-center m-5'>This is the home Page</h1>
+      <h1 className='text-4xl  text-center mt-6 font-bold underline bg-slate-500 w-100'>Beyondriffs</h1>
+      <img
+              src="https://cdn.mos.cms.futurecdn.net/jzfgpSpf8Ec25VipkSFEXE.jpg"
+              alt=""
+            />
+      
     </div>
   )
 }
