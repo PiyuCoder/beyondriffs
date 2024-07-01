@@ -1,80 +1,51 @@
 // @ts-ignore
-import COVER_IMAGE from './beyondriffs_logo.jpeg';
-import GOOGLE_ICON from './google_icon.png';
-const colors = {
-    primary: "#060606",
-    background: "#E0E0E0",
-    disabled: "#D9D9D9"
-}
+import googleIcon from './Pics/google_icon.png'; // Adjust the path as necessary
+import bgImage from './Pics/bg.png';
+import IndiaFlag from './Pics/flag.png';
 
 const Login = () => {
     return (
-      <div className="w-full h-screen flex items-start">
-        <div className='relative w-1/2 h-full flex flex-col'>
-          <div className='absolute top-[20%] left-[10%] flex flex-col'>
-            <h1 className='text-3xl text-white font-bold my-1'>Beyondriffs is more than just music lessons</h1>
-            <p className='text-xl text-white font-normal'>It's a gateway to self-expression, joy, and lifelong fulfillment. </p>
+      <div
+      className="background-image-container flex items-center justify-center min-h-screen bg-cover bg-center"
+      style={{ backgroundImage: `url(${bgImage})` }}
+      >   
+      <div className="bg-transparent bg-opacity-90 p-8 rounded-lg shadow-custom w-full max-w-md bg-gradient-custom">        
+        <h2 className="text-4xl text-white font-semibold font-Montserrat text-center mb-6 ">Welcome Back</h2>
+        <form>
+        <div className="mb-4">
+          <label className="block text-white font-semibold font-Montserrat text-sm  mb-2" htmlFor="phone">
+          Phone number
+          </label>
+          <div className="flex">
+          
+          <span className="inline-flex font-regular items-center px-3 rounded-l-md border border-r-0 border-gray-100 bg-gray-50 text-gray-500 text-sm"><img src={IndiaFlag} alt="Your Image" className="h-6 w-6" />
+            +91
+          </span>
+          <input
+            type="text"
+            id="phone"
+            className="flex-1 appearance-none border border-gray-300 rounded-r-md w-full py-2 px-3 leading-tight focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+            placeholder="Enter phone number"
+          />
           </div>
-          <img src={COVER_IMAGE} className="w-full h-full object-cover" />
         </div>
-
-        <div className="w-1/2 h-full flex flex-col p-20 justify-between items-center" style={{ backgroundColor: 'rgba(55, 28, 85, 0.134)' }}>
-          <h1 className='w-full max-w-[500px] mx-auto text-xl text-[#060606] font-semibold mr-auto'>Empowering individuals to discover their musical potential.</h1>
-            
-          <div className='w-full flex flex-col max-w-[500px]'>
-            <div className='w-full flex flex-col mb-2'>
-              <h3 className='text-3xl font-semibold mb-2'>Login</h3>
-              <p className='text-base mb-2'>Welcome Back! Please enter your details.</p>
-            </div>
-            <div className='w-full flex flex-col'>
-              <input
-                type="email"
-                placeholder="Email"
-                className='w-full text-black py-2 my-2 bg-transparent border-b border-black outline-none focus:outline-none'
-                required // Add the required attribute
-              />
-              <input
-                type="password"
-                placeholder="Password"
-                className='w-full text-black py-2 my-2 bg-transparent border-b border-black outline-none focus:outline-none'
-              />
-            </div>
-
-            <div className='w-full flex items-center justify-between'>
-              <div className='w-full flex item-center'>
-                <input type="checkbox" className=" w-4 h-4 mr-2" />
-                <p className='text-sm font-normal text-[#060606]'>Remember Me</p>
-              </div>
-              <p className='text-sm font-medium whitespace-nowrap cursor-pointer underline-offset-2'>Forgot password?</p>
-            </div>
-
-            <div className='w-full flex flex-col my-4'>
-              <button className='w-full text-white my-2 font-semibold bg-[#060606] rounded-md  p-4 text-center flex items-center justify-center cursor-pointer'>
-                Login
-              </button>
-              <button className='w-full text-[#060606] my-2 font-semibold  bg-white border-2 border-black rounded-md p-4 text-center flex items-center justify-center cursor-pointer'>
-                Register
-              </button>
-            </div>
-
-            <div className='w-full flex items-center justify-center relative py-2'>
-              <div className='w-full h-[1px] bg-black/40'></div>
-              {/* <p className='text-lg  absolute text-black/10000  bg-[rgba(53, 9, 104, 0.134)]'> or </p> */}
-            </div>
-
-            <div className='w-full text-[#060606] my-2 font-semibold  bg-white border border-black/40 rounded-md p-4 text-center flex items-center justify-center cursor-pointer'>
-              <img src={GOOGLE_ICON} className='h-6 mr-2' />
-              Sign In With Google
-            </div>
-
-
-          </div>
-          <div className='w-full flex items-center justify-center'>
-            <p className='text-sm font-normal text-[#060606]'>Don't have a account? <span className='font-semibold underline underline-offset-2 cursor-pointer'> Sign up for free</span></p>
-          </div>
-
-
+        <div className="flex items-center justify-between mb-1 py-5">
+          <button
+          type="button"
+          className="w-full text-white  font-Montserrat py-3 px-4  rounded-lg focus:outline-none focus:shadow-outline gradient-custom inner-shadow text-m"
+          >
+          Send code
+          </button>
         </div>
+        <div className="flex items-center justify-center mb-6">
+          <img src={googleIcon} alt="Google icon" className="h-8 w-8 " />
+        </div>
+        <div className="flex items-center justify-center">
+        <p style={{ color: 'rgb(179, 175, 179)' }} className="mr-2">Don't have an account? </p>
+          <a href="#" className="text-white font-small font-Montserrat text-sm ">Register</a>
+        </div>
+        </form>
+      </div>
       </div>
     );
 }
